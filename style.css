@@ -64,6 +64,14 @@ header {
   color: #fff;
 }
 
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -85,13 +93,19 @@ form {
   padding: 10px;
 }
 
+form div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
 form label {
   font-weight: bold;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
   width: 180px;
 }
 
@@ -103,6 +117,17 @@ form button {
   padding: 15px;
   width: 100%;
 }
+
+form .select {
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  padding: 20px 0;
+}
+
+
 
 /* -------  Footer ------- */
 
@@ -117,3 +142,125 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  /* ------- Header ------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  header nav ul li {
+    padding: 0 8px;
+  }
+
+  /* ------- Stay ------- */
+
+  #stay form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  #stay label {
+    width: 100%;
+  }
+
+  #stay .select {
+    width: 100%
+  }
+
+  #stay button {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  #stay div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+
+  /* ------- About ------- */
+  #about .group {
+    text-align: center;
+  }
+
+  #about img {
+    width: 250px;
+    padding: 30px;
+  }
+}
+
+/* ------- Ideas ------- */
+@media all and (min-width: 800px) {
+  #about {
+    padding: 30px;
+  }
+
+  #about .about-inner-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #about p {
+    width: 50%;
+  }
+
+  #about img {
+    padding: 10px;
+  }
+
+  #ideas .ideas-container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 40px auto;
+  }
+
+  #ideas img {
+    width: 350px;
+    padding: 20px;
+  }
+
+  #ideas .forests, .beaches {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .invis-mobile {
+    display: inline-block;
+  }
+
+  #ideas .rustic-cabins {
+    display: none;
+  }
+
+  #ideas .pet-friendly {
+    display: none;
+  }
+
+  #host {
+    display: flex;
+    align-items: center;
+  }
+
+  #host .host-group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #host img {
+    width: 50%;
+  }
+}
