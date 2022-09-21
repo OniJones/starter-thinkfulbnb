@@ -19,13 +19,13 @@
 
   <body>
     <header>
-      <div class="logo">Thinkfulbnb</div>
+      <div class="logo">ThinkfulBNB</div>
       <nav>
         <ul id="menu">
-          <li><a>Stay</a></li>
-          <li><a>About</a></li>
-          <li><a>Ideas</a></li>
-          <li><a>Host</a></li>
+          <li><a href="#stay">Stay</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ideas">Ideas</a></li>
+          <li><a href="#host">Host</a></li>
         </ul>
       </nav>
     </header>
@@ -39,32 +39,20 @@
           <div>
             <label for="location">Location</label>
             <input
-              id="location" 
+              id="location"
               type="text"
               placeholder="Search destination"
+              required
             />
           </div>
-
           <div>
             <label for="arrive">Arrive</label>
-            <input 
-              id="arrive"
-              type="date"
-              name="arrive"
-              required
-            />
+            <input id="arrive" type="date" name="arrive" min="2022-01-01" required />
           </div>
-
           <div>
             <label for="depart">Depart</label>
-            <input
-              id="depart" 
-              type="date"
-              name="depart"
-              required
-            />
+            <input id="depart" type="date" name="depart" min="2022-01-01" required />
           </div>
-
           <div>
             <p class="select">Type</p>
             <select name="building" size="1">
@@ -72,16 +60,14 @@
               <option value="barn">Barn</option>
               <option value="castle">Castle</option>
               <option value="houseboat">Houseboat</option>
-              <option value="tiny house">Tiny House</option>
+              <option value="tiny-house">Tiny House</option>
               <option value="yacht">Yacht</option>
               <option value="yurt">Yurt</option>
             </select>
           </div>
-
           <div>
             <button type="submit">Search</button>
           </div>
-
         </form>
       </section>
 
@@ -144,7 +130,10 @@
 
           <div class="pet-friendly">
             <h3>Pet-friendly</h3>
-            <img src="images/pet-friendly.png" alt="Thinkfulbnb - Pet-friendly" />
+            <img
+              src="images/pet-friendly.png"
+              alt="Thinkfulbnb - Pet-friendly"
+            />
           </div>
         </div>
       </section>
@@ -164,14 +153,15 @@
             <li>Mauris in pellentesque ligula.</li>
             <li>Sed accumsan elit lacus, id ultrices libero rutrum vitae.</li>
             <li>Nunc vitae ex eget neque pellentesque porttitor.</li>
-            <li>Cras mollis lorem sagittis sapien imperdiet blandit. Vivamus.</li>
             <li>
-              Donec vehicula ipsum nisi, eu consectetur leo feugiat et. Fusce eget
-              hendrerit mauris.
+              Cras mollis lorem sagittis sapien imperdiet blandit. Vivamus.
+            </li>
+            <li>
+              Donec vehicula ipsum nisi, eu consectetur leo feugiat et. Fusce
+              eget hendrerit mauris.
             </li>
           </ul>
         </div>
-        
         <img src="images/become-a-host.png" alt="Thinkfulbnb - Become a host" />
       </section>
     </main>
