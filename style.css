@@ -1,40 +1,51 @@
-/* ------- General Styles ------- */
+/* -------  General Styles ------- */
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+div.logo {
+	font-family: "cereal"
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: 400;
-  margin: 0 10px 10px 10px;
-  text-align: center;
+	font-size: 42px;
+	font-weight: 400;
+	margin: 0 10px 10px 10px;
+	text-align: center;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 500;
+	font-size: 24px;
+	font-weight: 500;
+	font-weight: bold;
 }
 
 p {
-  line-height: 1.5em;
-  margin: 0;
+	line-height: 1.5em;
+	margin: 0;
+	font-size: 19px;
+}
+
+li {
+	font-size: 19px;
 }
 
 section {
-  padding: 20px;
+	padding: 20px;
 }
 
 section.alternate-background {
-  background-color: #00a699;
-  color: #fff;
+	background-color: #00a699;
+	color: #fff;
 }
 
-img {
-  width: 100%;
+main img {
+	width: 100%;
 }
 
-/* --- Groups & Items --- */
+
+/* ---  Groups & Items --- */
 
 .group {
   display: flex;
@@ -43,95 +54,95 @@ img {
 
 .item {
   flex: 1;
-  margin: 10px;
+  margin:10px;
 }
 
 .item-double {
   flex: 2;
 }
 
-/* ------- Navigation ------- */
-
+/* -------  Navigation ------- */
 header {
   background-color: #ff385c;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
-.logo {
-  font-family: 'Pangolin', cursive;
-  font-size: 42px;
-  color: #fff;
+header nav {
+	display: flex;
+	justify-content: center;
 }
 
 header nav ul {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	padding-left: 0;
+	list-style: none;
+}
+
+.logo {
+	font-family: "Pangolin", cursive;
+	font-size: 72px;
+	color: #fff;
 }
 
 header nav ul li {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 header nav ul li a {
-  color: #fff;
-  text-decoration: none;
+	color: #fff;
+	text-decoration: none;
+	padding: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
+	color: #bdbdbd;
+	text-decoration: none;
 }
 
-/* ------- Search Form ------- */
+/* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 20px;
+	border: 2px solid #ff385c;
+	padding: 10px;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 form div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+	display: flex;
+}
+
+form div label {
+	flex: 1;
 }
 
 form label {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 form select,
 form input {
-  width: 180px;
+	margin-bottom: 20px;
+	width: 180px;
 }
 
 form button {
-  background-color: #ff385c;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  padding: 15px;
-  width: 100%;
+	background-color: #ff385c;
+	border: none;
+	color: #fff;
+	font-size: 24px;
+	padding: 15px;
+	width: 100%;
 }
 
-form .select {
-  display: inline-block;
+main form {
+	text-align: left;
+	padding: 20px;
 }
 
-/* ------- About ------- */
-#about img {
-  padding: 20px 0;
-}
-
-/* ------- Ideas ------- */
-#ideas .invis-mobile {
-  display: none;
-}
-
-/* ------- Footer ------- */
+/* -------  Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -143,134 +154,57 @@ footer p {
   padding: 20px;
 }
 
-/* ------- Media Query ------- */
+/* -------  Media Query ------- */
+
 @media all and (min-width: 480px) {
   header {
+    background-color: #ff385c;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 30px;
-  }
-
-  header nav ul li {
-    padding: 0 8px;
-  }
-
-  /* ------- Stay ------- */
-  #stay form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0px 10px;
-  }
-
-  #stay label {
-    width: 100%;
-  }
-
-  #stay .select {
-    width: 100%;
-  }
-
-  #stay button {
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  #stay div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 5px;
-  }
-
-  /* ------- About ------- */
-  #about .about-inner-content {
-    text-align: center;
-  }
-
-  #about img {
-    width: 250px;
-    padding: 30px;
-  }
-
-  /* ------- Ideas ------- */
-}
-
-@media all and (min-width: 800px) {
-  /* ------- About ------- */
-  #about {
-    padding: 30px;
-  }
-
-  #about .about-inner-content {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
     flex-direction: row;
+    justify-content: space-between;
   }
 
-  #about p {
-    width: 50%;
-  }
-
-  #about img {
+  header nav {
     padding: 10px;
   }
 
-  /* ------- Ideas ------- */
+  form {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
-  #ideas .ideas-container {
+  .group {
     display: flex;
-    justify-content: space-between;
-    width: 900px;
-    margin: 40px auto;
-  }
-
-  #ideas img {
-    width: 350px;
-    padding: 20px;
-  }
-
-  #ideas .forests {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .beaches {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .invis-mobile {
-    display: inline-block;
-  }
-
-  #ideas .rustic-cabins {
-    display: none;
-  }
-
-  #ideas .pet-friendly {
-    display: none;
-  }
-
-  /* ------- Host ------- */
-  #host {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
     align-items: center;
   }
 
-  #host .host-group {
+  .vacation-form .item {
     display: flex;
     flex-direction: column;
-    padding: 20px;
   }
 
-  #host img {
-    width: 50%;
+  .item label, .item input, .item select, .item button {
+    display: flex;
+    width: 100%
+  }
+
+  .item button {
+    display: table-cell;
+  }
+
+  .column {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+    margin: 10px;
+  }
+
+  .gridrow {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
   }
 }
