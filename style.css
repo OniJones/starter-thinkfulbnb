@@ -5,7 +5,7 @@ body {
 }
 
 div.logo {
-	font-family: "cereal"
+	font-family: "cereal";
 }
 
 h2 {
@@ -173,14 +173,6 @@ footer p {
     flex-direction: row;
   }
 
-  .group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-items: center;
-  }
-
   .vacation-form .item {
     display: flex;
     flex-direction: column;
@@ -206,5 +198,15 @@ footer p {
     display: flex;
     flex: 1;
     flex-direction: row;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
   }
 }
