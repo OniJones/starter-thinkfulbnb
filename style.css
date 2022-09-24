@@ -4,12 +4,8 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-div.logo {
-	font-family: "cereal";
-}
-
 h2 {
-	font-size: 42px;
+	font-size: 26px;
 	font-weight: 400;
 	margin: 0 10px 10px 10px;
 	text-align: center;
@@ -24,12 +20,12 @@ h3 {
 p {
 	line-height: 1.5em;
 	margin: 0;
-	font-size: 19px;
+	/* font-size: 19px; */
 }
 
-li {
+/* li {
 	font-size: 19px;
-}
+} */
 
 section {
 	padding: 20px;
@@ -42,6 +38,7 @@ section.alternate-background {
 
 main img {
 	width: 100%;
+  border-radius: 5px;
 }
 
 
@@ -64,9 +61,16 @@ main img {
 /* -------  Navigation ------- */
 header {
   background-color: #ff385c;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 0 20px 0;
   text-align: center;
   flex-wrap: wrap;
+}
+
+.logo {
+	font-family: "Pangolin", cursive;
+	font-size: 45px;
+	color: #fff;
+  justify-content: center;
 }
 
 header nav {
@@ -80,20 +84,25 @@ header nav ul {
 	list-style: none;
 }
 
-.logo {
-	font-family: "Pangolin", cursive;
-	font-size: 72px;
-	color: #fff;
-}
-
 header nav ul li {
 	list-style-type: none;
+  font-size: large;
 }
 
 header nav ul li a {
 	color: #fff;
 	text-decoration: none;
 	padding: 0 20px 0 0;
+}
+
+header nav ul li a {
+  margin-right: 20px;
+  padding: 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+  padding-right: 0;
 }
 
 header nav ul li a:hover {
@@ -112,10 +121,12 @@ form {
 
 form div {
 	display: flex;
+  justify-content: space-between;
 }
 
 form div label {
 	flex: 1;
+  padding: 0 10px;
 }
 
 form label {
@@ -125,7 +136,7 @@ form label {
 form select,
 form input {
 	margin-bottom: 20px;
-	width: 180px;
+	width: 50%;
 }
 
 form button {
@@ -135,11 +146,16 @@ form button {
 	font-size: 24px;
 	padding: 15px;
 	width: 100%;
+  border-radius: 5px;
+}
+
+input[type="date"] {
+  overflow: overlay;
 }
 
 main form {
 	text-align: left;
-	padding: 20px;
+	padding: 0;
 }
 
 /* -------  Footer ------- */
@@ -158,15 +174,22 @@ footer p {
 
 @media all and (min-width: 480px) {
   header {
-    background-color: #ff385c;
     display: flex;
-    flex-direction: row;
+    padding: 20px 20px 20px 20px;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 30px;
+    justify-content: center;
   }
 
   header nav {
-    padding: 10px;
+    align-items: center;
   }
+
+/* .... Form .... */
 
   form {
     flex-wrap: wrap;
